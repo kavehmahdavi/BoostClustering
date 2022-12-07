@@ -1,0 +1,188 @@
+% \documentclass[a4paper, 12pt]{article}
+\documentclass[twoside,a4,english,11pt]{book}
+\usepackage[margin=1in]{geometry}
+% \documentclass[a4paper, twoside=semi, BCOR=5mm, 12pt]{scrbook}
+% \usepackage{cleveref}
+% \DeclareMathSizes{12}{20}{14}{10}
+
+% \usepackage[toc]{glossaries}
+% \renewcommand*{\glsgroupskip}{}
+% \renewcommand*{\glsseeformat}[3][\seename]{(\xmakefirstuc{#1}\glsseelist{#2}.)}
+
+% \titlehead{
+% {\Large Unseen University \hfill SS~2002\\}
+%  Higher Analytical Institute\\
+%  Mythological Rd\\
+%  34567 Etherworld
+% }
+
+\pagestyle{plain}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[british]{babel}
+
+% \parindent 1cm
+% \parskip 0.2cm
+% \topmargin 0.2cm
+% \oddsidemargin 1cm
+% \evensidemargin 0.5cm
+% \textwidth 15cm
+% \textheight 21cm
+
+% ******************************************************************************
+% B5 book boxing
+% ******************************************************************************
+
+% \addtolength{\oddsidemargin}{-0.2345679in} % magic number = 1 - 1/0.81 
+% \addtolength{\oddsidemargin}{−0,19047619in} % magic number = 1 - 1/0.81 
+% \addtolength{\evensidemargin}{−0,19047619in} % magic number = 1 - 1/0.81 
+% \addtolength{\evensidemargin}{-0.2345679in}% see documentation scale package 
+% \addtolength{\topmargin}{-0.2345679in} % for explanation 
+% \mag=840 % basic TeX command for 81% scaling 
+% \usepackage[b5paper]{geometry}
+% \usepackage[pdflatex,cam,a4,center,frame]{crop}
+
+% \usepackage[pdflatex, b5, center, frame]{crop}
+% % \usepackage{showframe}  
+
+% \usepackage{setspace}
+% \onehalfspace
+% \singlespace
+
+% \usepackage[scaled]{helvet}
+% \usepackage{sectsty}
+% \usepackage{amsmath,amssymb,amsfonts}
+
+% \usepackage[OT1]{fontenc}
+% \usepackage{iwona}
+% \usepackage{tgpagella}
+% \usepackage{pandora}
+
+% \usepackage[T1]{fontenc}
+% \usepackage{efont,mathesf}
+% \renewcommand*\oldstylenums[1]{{\fontfamily{esfod}\selectfont#1}}
+
+
+\usepackage[T1]{fontenc}
+% \usepackage{libertine}
+% \usepackage[seriftt]{lucidabr}
+% \usepackage[scaled=0.8]{beramono}
+\usepackage{amsfonts}
+
+
+\usepackage{graphicx}
+\usepackage{lettrine}
+
+\usepackage[unicode=false,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,
+ breaklinks=true, backref=false, colorlinks=false]
+ {hyperref}
+\hypersetup{
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitV},    % fits the width of the page to the window
+    pdfsubject={Parallel performance analysis},   % subject of the document
+%     pdfcreator={Creator},   % creator of the document
+%     pdfproducer={Producer}, % producer of the document    
+    pdfnewwindow=true,      % links in new window
+    pdftitle={ClusteringSuite Manual},    % title
+    pdfauthor={Juan Gonzalez Garcia},     % author
+    pdfkeywords={high performance computing, parallel applications, performance analysis, automatic analysis,cluster analysis, sequence analysis, data mining}, % list of keywords
+}
+
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+
+% \newcommand{\ignore}[1]{}
+% \newcommand{\nobibentry}[1]{{\let\nocite\ignore\bibentry{#1}}}
+% % apsrev entries in the text need definitions of these commands
+% \newcommand{\bibfnamefont}[1]{#1}
+% \newcommand{\bibnamefont}[1]{#1}
+
+% \usepackage{floatrow}
+\usepackage{subfig}
+% \usepackage{subcaption}
+% \usepackage{subfigure}
+
+% \usepackage{boxedminipage}
+\usepackage{tikz}
+% \usepackage{caption}
+
+% \usepackage{xcolor}
+% \usepackage{fancybox}
+
+\usepackage{lipsum}
+\usepackage{multicol}
+
+% \usepackage{multirow}
+% \usepackage{colortbl}
+
+% \usepackage{makecell}
+
+% \newcommand{\goodgap}{%
+% \hspace{\subfigtopskip}%
+% \hspace{\subfigbottomskip}}
+
+% \usepackage[stretch=10]{microtype}
+
+% \usepackage{float}
+
+\usepackage{amsmath}
+
+\usepackage{algorithmic}
+\usepackage{algorithm2e}
+
+% \usepackage{afterpage}
+% \usepackage{pdflscape}
+\usepackage{rotating}
+
+% \usepackage{graphicx}
+\usepackage{array}
+
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage{xcolor}   % http://ctan.org/pkg/xcolor
+\usepackage{colortbl} % http://ctan.org/pkg/colortbl
+% \usepackage{dcolumn}
+
+\usepackage{fancyvrb}
+\usepackage{threeparttable}
+
+% \usepackage{varwidth}
+
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
+
+\usepackage{floatrow}
+
+% \usepackage{pdfpages}
+\urlstyle{leostyle}
+
+\makeatletter
+\def\url@leostyle{
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\usepackage{babel}
+\makeatother
+
+\include{extra_commands}
+
+\begin{document}
+
+\begin{figure}[!h]
+  
+\begin{tikzpicture}
+\node [fill=figureshade,rounded corners=5pt]
+{
+
+\begin{minipage}{1\textwidth}
+% \fontsize{9}{10}
+\texttt{> BurstClustering -d cluster.xml -i su3.lat256\_2it.16tasks.prv -o su3.lat256\_2it.16tasks.clustered.prv}
+\end{minipage}
+};
+\end{tikzpicture}
+
+\end{figure}
+
+\end{document}

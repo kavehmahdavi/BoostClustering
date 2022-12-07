@@ -1,0 +1,70 @@
+#!/bin/bash
+
+usage()
+{
+	cat <<EOF
+Usage: clustering-config [OPTION]
+
+Known values for OPTION are:
+
+  --prefix          print ClusteringSuite installation directory
+  --cppflags        print pre-processor and compiler flags 
+  --cflags          equivalent to 'cppflags' (for compatibility)
+  --ldflags         print linker directories
+  --libtool-ldflags print libtool friendly (re)linking directories
+  --libs            print library linking information
+  --help            display this help and exit
+  --version         output version information
+
+EOF
+
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1
+fi
+
+while test $# -gt 0; do
+	case "$1" in
+	--prefix)
+		echo @sub_PREFIX@
+		;;
+
+	--version)
+		echo @sub_VERSION@
+		exit 0
+		;;
+
+	--help)
+		usage 0
+		;;
+
+	--cppflags)
+		echo "-I@sub_PREFIX@/include @sub_CPPFLAGS@"
+		;;
+
+	--cflags)
+		echo "-I@sub_PREFIX@/include @sub_CPPFLAGS@"
+		;;
+
+	--ldflags)
+		echo "-L@sub_PREFIX@/lib @sub_LDFLAGS@"
+		;;
+
+	--libtool-ldflags)
+		echo "-L@sub_PREFIX@/lib -R@sub_PREFIX@/lib @sub_LIBTOOL_LDFLAGS@"
+		;;
+
+	--libs)
+		echo "@sub_LIBS@"
+		;;
+
+	*)
+		usage
+		exit 1
+		;;
+	esac
+	shift
+done
+
